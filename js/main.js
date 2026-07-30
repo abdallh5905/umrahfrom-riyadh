@@ -14,6 +14,17 @@ document.querySelectorAll('[data-wa]').forEach((el) => {
   el.setAttribute('rel', 'noopener');
 });
 
+// ===================== Hero Background Slideshow =====================
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1) {
+  let activeSlide = 0;
+  setInterval(() => {
+    heroSlides[activeSlide].classList.remove('active');
+    activeSlide = (activeSlide + 1) % heroSlides.length;
+    heroSlides[activeSlide].classList.add('active');
+  }, 5000);
+}
+
 // ===================== Mobile Menu =====================
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');

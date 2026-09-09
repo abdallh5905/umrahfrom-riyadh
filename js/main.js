@@ -1,5 +1,5 @@
 // ===================== Config =====================
-const WHATSAPP_NUMBER = '966548823582'; // 054 882 3582
+const WHATSAPP_NUMBER = '966570961393'; // 0570961393
 
 function waLink(message) {
   const text = encodeURIComponent(message || 'السلام عليكم، أرغب بالاستفسار عن رحلات العمرة من الرياض.');

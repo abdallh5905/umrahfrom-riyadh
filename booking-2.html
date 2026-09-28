@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>احجز عمرتك من الرياض | نموذج الحجز</title>
+    <meta name="description" content="رحلات عمرة من الرياض إلى مكة المكرمة — باصات حديثة موديل 2026 مكيّفة، فنادق قريبة من الحرم، باقات اقتصادية و VIP، والدفع عند الركوب بدون مقدم." />
+    <meta name="keywords" content="رحلات عمرة من الرياض, حملات عمرة, باصات عمرة من الرياض, عمرة اقتصادية, عمرة VIP" />
+    <meta name="theme-color" content="#064e3b" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/kaaba-hero.webp" fetchpriority="high">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      :root{
+        --font:'Cairo',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+        --green-900:#03251c; --green-800:#064e3b; --green-700:#0a6b50; --green-500:#10b981;
+        --gold:#d4af37; --gold-light:#e9c767; --gold-dark:#a8841c;
+        --call:#0b63e5; --call-dark:#084cb0;
+        --ink:#16201d; --ink-soft:#3b4a45; --gray:#6b7a75;
+        --bg-soft:#f4f7f5; --border:#e4eae7; --sand:#faf7ee;
+        --radius:18px; --radius-lg:24px;
+        --shadow:0 8px 24px -12px rgba(6,40,30,.18);
+        --shadow-lg:0 26px 60px -24px rgba(6,60,45,.35);
+        --t:all .3s cubic-bezier(.4,0,.2,1);
+      }
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+      body{
+        font-family:var(--font);font-size:clamp(.97rem,.94rem + .16vw,1.06rem);
+        line-height:1.85;letter-spacing:0;color:var(--ink);background:#fff;overflow-x:hidden;
+        -webkit-font-smoothing:antialiased;
+      }
+      h1,h2,h3,h4{font-weight:900;line-height:1.35;color:var(--green-800);text-wrap:balance}
+      p{text-wrap:pretty}
+      ul{list-style:none}
+      a{text-decoration:none;color:inherit;transition:var(--t)}
+      button,input,select,textarea{font:inherit;letter-spacing:0}
+      bdo{font-variant-numeric:tabular-nums}
+      :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+      .wrap{width:100%;max-width:1060px;margin-inline:auto;padding-inline:clamp(16px,4vw,26px)}
+      section{padding-block:clamp(52px,6vw,84px)}
+
+      /* ===== الهيدر ===== */
+      .top{
+        position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);
+        backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding-block:10px;
+      }
+      .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px}
+      .brand{display:flex;align-items:center;gap:11px}
+      .brand-mark{
+        width:46px;height:46px;flex:0 0 46px;border-radius:14px;display:grid;place-items:center;
+        background:linear-gradient(140deg,#053f30,#0a7a5c 55%,#12b981);
+        border:2px solid var(--gold);color:#f7e7a6;font-size:21px;
+      }
+      .brand-txt strong{display:block;font-size:1.02rem;font-weight:900;color:var(--green-800);line-height:1.25}
+      .brand-txt small{color:var(--gray);font-size:.76rem;font-weight:700}
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:10px;
+        padding:13px 24px;border-radius:99px;font-weight:800;font-size:.95rem;
+        cursor:pointer;border:none;transition:var(--t);text-align:center;line-height:1.3;
+      }
+      .btn-call{background:var(--call);color:#fff;box-shadow:0 12px 24px -12px rgba(11,99,229,.8)}
+      .btn-call:hover{background:var(--call-dark);transform:translateY(-3px)}
+      .btn-gold{background:linear-gradient(135deg,var(--gold-light),#c39a1f);color:#2b2103;box-shadow:0 12px 24px -12px rgba(212,175,55,.8)}
+      .btn-gold:hover{transform:translateY(-3px);filter:brightness(1.05)}
+      .btn-green{background:var(--green-700);color:#fff;box-shadow:0 12px 24px -12px rgba(6,78,59,.8)}
+      .btn-green:hover{background:var(--green-800);transform:translateY(-3px)}
+      .btn-lg{padding:16px 28px;font-size:1.05rem}
+      .btn-block{width:100%}
+      .top .btn{padding:9px 18px;font-size:.88rem}
+      .top .btn bdo{font-weight:900}
+
+      /* ===== الهيرو (الصورة الوحيدة في الصفحة) ===== */
+      .hero{position:relative;display:flex;align-items:center;min-height:86svh;padding-block:clamp(50px,7vw,80px);overflow:hidden;background:var(--green-900)}
+      .hero-bg{position:absolute;inset:0;background:url('images/kaaba-hero.webp') center 32%/cover no-repeat;transform:scale(1.04)}
+      .hero-veil{position:absolute;inset:0;background:
+        linear-gradient(to left,rgba(2,20,15,.95) 0%,rgba(3,34,26,.88) 40%,rgba(4,45,34,.5) 70%,rgba(4,45,34,.22) 100%),
+        linear-gradient(to top,rgba(2,18,14,.9) 0%,transparent 48%)}
+      .hero .wrap{position:relative;z-index:2}
+      .pill{
+        display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);
+        border:1px solid rgba(255,255,255,.24);color:#ffe9a8;font-weight:700;font-size:.88rem;
+        padding:8px 17px;border-radius:99px;margin-bottom:18px;
+      }
+      .pill .dot{width:9px;height:9px;border-radius:50%;background:#2bff88;box-shadow:0 0 0 5px rgba(43,255,136,.18)}
+      .hero h1{color:#fff;font-size:clamp(2rem,1.4rem + 2.9vw,3.3rem);line-height:1.28;margin-bottom:8px;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+      .hero h1 span{display:block;font-size:.82em;font-weight:800;
+        background:linear-gradient(90deg,#fff3cd,var(--gold-light) 45%,var(--gold));
+        -webkit-background-clip:text;background-clip:text;color:transparent}
+      .hero p.lead{color:rgba(255,255,255,.88);font-size:clamp(1rem,.95rem + .35vw,1.15rem);max-width:54ch;margin:14px 0 20px}
+      .chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}
+      .chips li{
+        display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);
+        border:1px solid rgba(255,255,255,.18);color:#fff;font-size:.88rem;font-weight:700;
+        padding:8px 15px;border-radius:99px;
+      }
+      .chips i{color:var(--gold-light)}
+      .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+      .call-ic{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:15px}
+      .call-tx{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25}
+      .call-tx small{font-size:.75rem;opacity:.9;font-weight:600}
+      .call-tx bdo{font-size:1.1rem;font-weight:900}
+
+      /* ===== شريط الثقة ===== */
+      .strip{background:linear-gradient(90deg,#b8931f,var(--gold-light),#b8931f);padding-block:14px}
+      .strip .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;color:#241d03;font-weight:800;font-size:.92rem}
+      .strip span{display:inline-flex;align-items:center;gap:8px}
+
+      /* ===== عناوين الأقسام ===== */
+      .head{text-align:center;max-width:700px;margin:0 auto clamp(28px,4vw,44px)}
+      .kicker{display:inline-block;background:#e8f5ee;color:var(--green-800);border:1px solid #c4e5d4;
+        font-weight:800;font-size:.8rem;padding:6px 17px;border-radius:99px;margin-bottom:12px}
+      .head h2{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);margin-bottom:10px}
+      .head p{color:var(--gray);font-size:1.02rem;line-height:1.6}
+
+      /* ===== الباقات (أيقونات بدل الصور) ===== */
+      .packs{background:var(--bg-soft)}
+      .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:20px}
+      .card{
+        background:#fff;border-radius:var(--radius-lg);border:1px solid var(--border);
+        box-shadow:var(--shadow);padding:28px 24px;display:flex;flex-direction:column;transition:var(--t);
+        position:relative;overflow:hidden;
+      }
+      .card::before{content:'';position:absolute;inset:0 0 auto 0;height:4px;background:var(--green-700)}
+      .card.vip{border:2px solid var(--gold)}
+      .card.vip::before{background:linear-gradient(90deg,var(--gold-light),#b8931f)}
+      .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+      .card .ic{
+        width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:25px;
+        background:#e8f5ee;color:var(--green-800);margin-bottom:16px;
+      }
+      .card.vip .ic{background:linear-gradient(135deg,var(--gold-light),#b8931f);color:#241d03}
+      .card h3{font-size:1.22rem;margin-bottom:4px}
+      .card .sub{color:var(--gray);font-size:.88rem;font-weight:700;margin-bottom:14px}
+      .card ul{margin-bottom:20px}
+      .card ul li{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-bottom:1px dashed var(--border);
+        font-size:.92rem;font-weight:600;color:var(--ink-soft);line-height:1.6}
+      .card ul i{color:var(--green-500);font-size:.78rem;margin-top:8px}
+      .card .btn{margin-top:auto}
+
+      /* ===== الرحلة خطوة بخطوة ===== */
+      .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:18px}
+      .step{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
+      .step .num{
+        width:46px;height:46px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;
+        background:var(--green-800);color:#ffe9a8;font-weight:900;font-size:1.1rem;
+      }
+      .step h3{font-size:1.02rem;margin-bottom:7px}
+      .step p{color:var(--gray);font-size:.9rem;line-height:1.6}
+
+      /* ===== مميزات ===== */
+      .why{background:linear-gradient(135deg,var(--green-800),var(--green-900));color:#fff}
+      .why .head h2{color:#fff}
+      .why .head p{color:rgba(255,255,255,.82)}
+      .why .kicker{background:rgba(255,255,255,.14);color:#ffe9a8;border-color:rgba(255,255,255,.28)}
+      .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(222px,1fr));gap:18px}
+      .why-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:26px 20px;text-align:center}
+      .why-card i{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;margin:0 auto 13px;
+        background:linear-gradient(135deg,var(--gold-light),#b8931f);color:#241d03;font-size:21px}
+      .why-card h3{color:#fff;font-size:1.02rem;margin-bottom:7px}
+      .why-card p{color:rgba(255,255,255,.85);font-size:.89rem;line-height:1.6}
+
+      /* ===== فورم الحجز ===== */
+      .booking{background:var(--bg-soft)}
+      .form-box{
+        max-width:740px;margin-inline:auto;background:#fff;border-radius:var(--radius-lg);
+        border:1px solid var(--border);border-top:5px solid var(--gold);
+        box-shadow:var(--shadow-lg);overflow:hidden;
+      }
+      .form-head{background:linear-gradient(135deg,var(--green-800),var(--green-700));color:#fff;padding:24px 26px 20px;text-align:center}
+      .form-head h2{color:#fff;font-size:1.45rem;margin-bottom:5px}
+      .form-head p{font-size:.92rem;opacity:.88}
+      .form-body{padding:clamp(20px,3vw,30px)}
+      .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+      .field{margin-bottom:15px}
+      .field label{display:block;font-weight:800;font-size:.86rem;color:var(--green-800);margin-bottom:7px}
+      .field label .req{color:#d33}
+      .field input,.field select,.field textarea{
+        width:100%;padding:13px 15px;border:2px solid var(--border);border-radius:12px;
+        background:#fbfcfb;font-size:1rem;transition:var(--t);color:var(--ink);
+      }
+      .field input::placeholder,.field textarea::placeholder{color:#9aa8a3}
+      .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green-700);background:#fff}
+      .field textarea{resize:vertical;min-height:92px;line-height:1.6}
+      .field input[type="date"]{font-family:var(--font)}
+      .field input[dir="ltr"]{text-align:right}
+      .hint{font-size:.78rem;color:var(--gray);margin-top:6px}
+      .counter{display:flex;align-items:center;gap:6px;background:#fbfcfb;border:2px solid var(--border);border-radius:12px;padding:5px}
+      .counter button{width:38px;height:38px;flex:0 0 38px;border-radius:10px;border:none;background:var(--green-800);
+        color:#fff;font-size:1.3rem;font-weight:900;cursor:pointer;display:grid;place-items:center;line-height:1;transition:var(--t)}
+      .counter button:hover{background:var(--green-700)}
+      .counter button:disabled{background:#c8d3cf;cursor:not-allowed}
+      .counter input{flex:1;text-align:center!important;border:none!important;background:transparent!important;font-weight:900;
+        font-size:1.05rem;color:var(--green-800);padding:0;-moz-appearance:textfield}
+      .counter input::-webkit-outer-spin-button,.counter input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+      .note{background:var(--sand);border:1px dashed #e3cf7a;border-radius:12px;padding:12px 14px;font-size:.84rem;color:#6b5a0a;font-weight:700;margin-bottom:16px}
+      .note i{color:var(--gold-dark);margin-left:6px}
+      .or{text-align:center;color:var(--gray);font-size:.86rem;font-weight:700;margin:14px 0 12px}
+      .ok-msg{display:none;background:#e8f7ee;border:2px solid #9fdcba;color:#0c5b38;border-radius:14px;padding:18px;text-align:center;font-weight:800;margin-bottom:20px}
+      .ok-msg i{font-size:1.5rem;display:block;margin-bottom:8px;color:var(--green-500)}
+      body.sent .ok-msg{display:block}
+
+      /* ===== أسئلة ===== */
+      .faq-list{max-width:790px;margin-inline:auto}
+      .faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:11px;overflow:hidden;box-shadow:var(--shadow)}
+      .faq-item summary{padding:17px 20px;font-weight:800;color:var(--green-800);cursor:pointer;list-style:none;
+        display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:1rem}
+      .faq-item summary::-webkit-details-marker{display:none}
+      .faq-item summary::after{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;font-size:.8rem;transition:var(--t)}
+      .faq-item[open] summary::after{transform:rotate(180deg)}
+      .faq-item p{padding:0 20px 18px;color:var(--gray);font-size:.94rem}
+
+      /* ===== الفوتر ===== */
+      footer{background:#0d1310;color:#fff;padding:42px 0 22px;text-align:center}
+      footer .brand{justify-content:center;margin-bottom:14px}
+      footer .brand-txt strong{color:#fff}
+      footer .brand-txt small{color:#97a3a0}
+      footer p{color:#97a3a0;font-size:.9rem;margin-bottom:8px}
+      footer .f-call{display:inline-flex;align-items:center;gap:9px;color:var(--gold-light);font-weight:900;font-size:1.15rem;margin:10px 0}
+      .copy{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;margin-top:20px;color:#8b9794;font-size:.82rem}
+
+      /* ===== زر اتصال عائم ===== */
+      .float-call{
+        position:fixed;bottom:20px;left:18px;z-index:99;width:58px;height:58px;border-radius:50%;
+        background:var(--call);color:#fff;display:grid;place-items:center;font-size:22px;
+        box-shadow:0 6px 20px rgba(11,99,229,.5);animation:ping 2.4s infinite;
+      }
+      .float-call:hover{transform:scale(1.08)}
+      @keyframes ping{0%{box-shadow:0 0 0 0 rgba(11,99,229,.6)}70%{box-shadow:0 0 0 14px rgba(11,99,229,0)}100%{box-shadow:0 0 0 0 rgba(11,99,229,0)}}
+
+      @media(max-width:600px){
+        .hero{min-height:auto}
+        .hero-cta{flex-direction:column;align-items:stretch}
+        .hero-cta .btn{width:100%}
+        .btn-call{justify-content:flex-start;gap:14px}
+        .row{grid-template-columns:1fr}
+        .top .brand-txt small{display:none}
+      }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+    </style>
+  </head>
+  <body>
+    <!-- ===== الهيدر ===== -->
+    <header class="top">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-kaaba" aria-hidden="true"></i></span>
+          <span class="brand-txt">
+            <strong>تنظيم رحلات عمرة من الرياض</strong>
+            <small>باصات حديثة • فنادق قرب الحرم</small>
+          </span>
+        </div>
+        <a href="tel:0548518022" class="btn btn-call">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <bdo dir="ltr">0548518022</bdo>
+        </a>
+      </div>
+    </header>
+
+    <!-- ===== الهيرو — خلفية الكعبة (الصورة الوحيدة في الصفحة) ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="wrap">
+        <span class="pill"><span class="dot" aria-hidden="true"></span> رحلات عمرة من الرياض</span>
+        <h1>
+          رحلتك إلى بيت الله
+          <span>براحة تليق بضيوف الرحمن</span>
+        </h1>
+        <p class="lead">
+          باصات موديل <b>2026</b> مكيّفة بالكامل، وفنادق مختارة على خطوات من الحرم.
+          باقات اقتصادية و VIP — والدفع عند الركوب بدون أي مقدّم.
+        </p>
+        <ul class="chips">
+          <li><i class="fa-solid fa-bus" aria-hidden="true"></i> باص 49 مقعد &nbsp;•&nbsp; VIP 30 مقعد</li>
+          <li><i class="fa-solid fa-hotel" aria-hidden="true"></i> فنادق 3 – 5 نجوم</li>
+          <li><i class="fa-solid fa-wallet" aria-hidden="true"></i> بدون مقدّم</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="#booking" class="btn btn-gold btn-lg">
+            <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+            احجز رحلتك الآن
+          </a>
+          <a href="tel:0548518022" class="btn btn-call btn-lg">
+            <span class="call-ic" aria-hidden="true"><i class="fas fa-phone"></i></span>
+            <span class="call-tx"><small>اتصال مباشر</small><bdo dir="ltr">0548518022</bdo></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== شريط الثقة ===== -->
+    <div class="strip">
+      <div class="wrap">
+        <span><i class="fa-solid fa-kaaba" aria-hidden="true"></i> الرياض ⇄ مكة المكرمة</span>
+        <span><i class="fa-solid fa-check" aria-hidden="true"></i> انطلاق شبه يومي</span>
+        <span><i class="fa-solid fa-check" aria-hidden="true"></i> 8 – 9 ساعات بالطريق</span>
+        <span><i class="fa-solid fa-check" aria-hidden="true"></i> الدفع عند الركوب</span>
+      </div>
+    </div>
+
+    <!-- ===== الباقات ===== -->
+    <section class="packs">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">باقات لكل ميزانية</span>
+          <h2>اختر نوع الرحلة اللي تناسبك</h2>
+          <p>ثلاث خيارات مرنة من الرياض — والسعر النهائي يتأكد معك حسب الموسم ومدة الإقامة</p>
+        </div>
+        <div class="grid-3">
+
+          <article class="card">
+            <span class="ic"><i class="fa-solid fa-bus" aria-hidden="true"></i></span>
+            <h3>العمرة الاقتصادية</h3>
+            <p class="sub">الأكثر حجزاً</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i> باص 2026 مكيّف — 49 مقعد</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> فندق 3 نجوم قريب من الحرم</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> إقامة 3 – 5 أيام</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> انطلاق شبه يومي</li>
+            </ul>
+            <a href="#booking" class="btn btn-green btn-block">احجز الاقتصادية</a>
+          </article>
+
+          <article class="card vip">
+            <span class="ic"><i class="fa-solid fa-crown" aria-hidden="true"></i></span>
+            <h3>عمرة VIP الفاخرة</h3>
+            <p class="sub">خصوصية وراحة أعلى</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i> باص فاخر 30 مقعد — صفوف 2+1</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> فندق 4 أو 5 نجوم بجوار الحرم</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> مشي 5 دقائق للحرم</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> انطلاق كل اثنين وخميس</li>
+            </ul>
+            <a href="#booking" class="btn btn-gold btn-block">احجز VIP</a>
+          </article>
+
+          <article class="card">
+            <span class="ic"><i class="fa-solid fa-ticket" aria-hidden="true"></i></span>
+            <h3>حجز باص فقط</h3>
+            <p class="sub">ذهاب وعودة أو اتجاه واحد</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i> عندك سكن في مكة؟ احجز مقعدك بس</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> مقعد مضمون بموعد ثابت</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> توقفات استراحة وصلاة</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> الدفع عند الصعود</li>
+            </ul>
+            <a href="#booking" class="btn btn-green btn-block">احجز مقعدك</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== خطوات الحجز ===== -->
+    <section>
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">بسيطة وواضحة</span>
+          <h2>الحجز في 4 خطوات</h2>
+          <p>من أول ما تسيب بياناتك لحد ما ترجع بالسلامة</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="num">1</span>
+            <h3>املأ النموذج</h3>
+            <p>اسمك ورقمك ونوع الرحلة وعدد الأفراد وموعد السفر.</p>
+          </div>
+          <div class="step">
+            <span class="num">2</span>
+            <h3>نتصل بك</h3>
+            <p>نأكّد التوفر ونقولك السعر النهائي بشفافية بدون رسوم خفية.</p>
+          </div>
+          <div class="step">
+            <span class="num">3</span>
+            <h3>نرسل لك التفاصيل</h3>
+            <p>نقطة التجمّع في الرياض وموعد الانطلاق قبل الرحلة بيوم.</p>
+          </div>
+          <div class="step">
+            <span class="num">4</span>
+            <h3>ادفع عند الركوب</h3>
+            <p>نقداً أو شبكة وقت الصعود — بدون أي مقدّم مسبق.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ليه إحنا ===== -->
+    <section class="why">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">وعدنا لك</span>
+          <h2>ليه آلاف المعتمرين بيختارونا؟</h2>
+          <p>لأننا بنتعامل مع رحلتك كأمانة — من لحظة الحجز حتى رجوعك بالسلامة</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+            <h3>بدون مقدّم</h3>
+            <p>تحجز وتأكّد مقعدك، وتدفع نقداً أو شبكة لمّا تركب.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+            <h3>التزام بالمواعيد</h3>
+            <p>مواعيد انطلاق ثابتة وتنظيم كامل للذهاب والعودة.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-bus" aria-hidden="true"></i>
+            <h3>باصات موديل 2026</h3>
+            <p>أسطول حديث مكيّف بالكامل وسائقين خبرة في الطريق.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-headset" aria-hidden="true"></i>
+            <h3>رد سريع</h3>
+            <p>فريقنا بيرد بسرعة قبل السفر وأثناءه وبعده.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== فورم الحجز ===== -->
+    <section class="booking" id="booking">
+      <div class="wrap">
+        <div class="form-box">
+          <div class="form-head">
+            <h2><i class="fa-regular fa-calendar-check" aria-hidden="true"></i> نموذج حجز العمرة</h2>
+            <p>املأ بياناتك وفريقنا هيتصل بك لتأكيد التوفر والسعر النهائي</p>
+          </div>
+
+          <div class="form-body">
+            <div class="ok-msg">
+              <i class="fas fa-circle-check" aria-hidden="true"></i>
+              تم استلام طلبك بنجاح!<br>
+              فريقنا هيتواصل معك في أقرب وقت لتأكيد الحجز.
+            </div>
+
+            <div class="note">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              الحجز بدون أي دفع مقدّم — الدفع نقداً أو شبكة عند صعود الباص.
+            </div>
+
+            <!--
+              ⚠️ مهم قبل الرفع:
+              غيّر البريد اللي تحت لبريدك الحقيقي عشان تستقبل الطلبات.
+              أول طلب هيوصلك إيميل تفعيل من FormSubmit — افتحه ودوس تفعيل مرة واحدة بس.
+            -->
+            <form action="https://formsubmit.co/ضع-بريدك-هنا@example.com" method="POST" id="bookingForm">
+              <input type="hidden" name="_subject" value="طلب حجز عمرة جديد من الموقع">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://shaermecca.site/booking-2.html?sent=1">
+
+              <div class="row">
+                <div class="field">
+                  <label for="name">الاسم الكامل <span class="req">*</span></label>
+                  <input type="text" id="name" name="الاسم" placeholder="اكتب اسمك" required>
+                </div>
+                <div class="field">
+                  <label for="phone">رقم الجوال <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="رقم الجوال" placeholder="05xxxxxxxx" dir="ltr"
+                         inputmode="numeric" pattern="05[0-9]{8}" maxlength="10" required>
+                  <p class="hint">يبدأ بـ 05 ويتكوّن من 10 أرقام</p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="trip">نوع الرحلة <span class="req">*</span></label>
+                <select id="trip" name="نوع الرحلة" required>
+                  <option value="">— اختر نوع الرحلة —</option>
+                  <option>العمرة الاقتصادية (باص + فندق 3 نجوم)</option>
+                  <option>عمرة VIP الفاخرة (باص فاخر + فندق 4-5 نجوم)</option>
+                  <option>حجز باص فقط (ذهاب وعودة)</option>
+                  <option>حجز باص فقط (اتجاه واحد)</option>
+                  <option>حجز فندق فقط</option>
+                  <option>مكة والمدينة</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="pax">عدد الأفراد <span class="req">*</span></label>
+                  <div class="counter">
+                    <button type="button" id="paxPlus" aria-label="زيادة عدد الأفراد">+</button>
+                    <input type="number" id="pax" name="عدد الأفراد" value="2" min="1" max="49" required readonly>
+                    <button type="button" id="paxMinus" aria-label="تقليل عدد الأفراد">−</button>
+                  </div>
+                  <p class="hint">من فرد واحد حتى 49 فرد</p>
+                </div>
+
+                <div class="field">
+                  <label for="date">موعد السفر <span class="req">*</span></label>
+                  <input type="date" id="date" name="موعد السفر" required>
+                  <p class="hint">لو المواعيد مرنة، اكتب كده في الملاحظات</p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="days">مدة الرحلة</label>
+                <select id="days" name="مدة الرحلة">
+                  <option value="غير محددة">— غير محددة، أحددها عند التأكيد —</option>
+                  <option>يومان</option>
+                  <option>3 أيام</option>
+                  <option selected>4 أيام</option>
+                  <option>5 أيام</option>
+                  <option>6 أيام</option>
+                  <option>أسبوع كامل</option>
+                  <option>أكثر من أسبوع</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="notes">ملاحظات إضافية</label>
+                <textarea id="notes" name="ملاحظات" placeholder="مثال: عندي كبار سن، أو أفضّل الصف الأمامي، أو مواعيدي مرنة"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-green btn-lg btn-block">
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                أرسل طلب الحجز
+              </button>
+
+              <p class="or">— أو —</p>
+
+              <a href="tel:0548518022" class="btn btn-call btn-lg btn-block">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                اتصل بنا مباشرة: <bdo dir="ltr">0548518022</bdo>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== أسئلة شائعة ===== -->
+    <section>
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">عندك سؤال؟</span>
+          <h2>الأسئلة اللي بتتسأل كل يوم</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>إزاي أحجز رحلة العمرة؟</summary>
+            <p>املأ نموذج الحجز بالأعلى (الاسم + الجوال + نوع الرحلة + عدد الأفراد + موعد السفر) وفريقنا هيتصل بك خلال وقت قصير لتأكيد التوفر والسعر النهائي. أو اتصل مباشرة على <bdo dir="ltr">0548518022</bdo>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>إيه مواعيد انطلاق الباصات؟</summary>
+            <p>الباص الاقتصادي (49 مقعد) بيتحرك شبه يومي، وباص VIP الفاخر (30 مقعد) بيتحرك كل اثنين وخميس. حدد تاريخك في النموذج وهنقولك أقرب رحلة متاحة.</p>
+          </details>
+          <details class="faq-item">
+            <summary>إيه الفرق بين الاقتصادية و VIP؟</summary>
+            <p>الاقتصادية: باص 49 مقعد + فندق 3 نجوم — قيمة ممتازة مقابل السعر. الـVIP: باص فاخر 30 مقعد بصفوف 2+1 ومساحة أوسع + فندق 4 أو 5 نجوم جنب الحرم.</p>
+          </details>
+          <details class="faq-item">
+            <summary>الدفع إزاي؟ وهل فيه مقدّم؟</summary>
+            <p>مفيش أي دفع مقدّم. بتحجز وتأكّد، وتدفع نقداً أو شبكة (مدى) لما تركب الباص. الأسعار النهائية حسب الباقة والموسم والمدة.</p>
+          </details>
+          <details class="faq-item">
+            <summary>فين مكان الانطلاق وكام ساعة الطريق؟</summary>
+            <p>نقطة التجمّع في الرياض بتتأكد معك قبل الرحلة بيوم. الطريق حوالي 850 كم وبياخد 8 – 9 ساعات مع توقفات مريحة للصلاة والأكل.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer>
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-kaaba" aria-hidden="true"></i></span>
+          <span class="brand-txt"><strong>تنظيم رحلات عمرة من الرياض</strong><small>خدمة ضيوف الرحمن</small></span>
+        </div>
+        <p>باصات حديثة موديل 2026 • فنادق قريبة من الحرم • الدفع عند الركوب</p>
+        <a href="tel:0548518022" class="f-call">
+          <i class="fas fa-phone" aria-hidden="true"></i> <bdo dir="ltr">0548518022</bdo>
+        </a>
+        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> الرياض، المملكة العربية السعودية</p>
+        <div class="copy">جميع الحقوق محفوظة &copy; 2026</div>
+      </div>
+    </footer>
+
+    <a href="tel:0548518022" class="float-call" aria-label="اتصال سريع"><i class="fas fa-phone" aria-hidden="true"></i></a>
+
+    <script>
+      // رسالة النجاح بعد إرسال الطلب
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        document.body.classList.add('sent');
+        document.getElementById('booking').scrollIntoView();
+      }
+
+      // عدّاد الأفراد
+      var pax = document.getElementById('pax');
+      var plus = document.getElementById('paxPlus');
+      var minus = document.getElementById('paxMinus');
+      function syncPax() {
+        var v = parseInt(pax.value, 10) || 1;
+        minus.disabled = v <= 1;
+        plus.disabled = v >= 49;
+      }
+      plus.addEventListener('click', function () {
+        pax.value = Math.min(49, (parseInt(pax.value, 10) || 1) + 1); syncPax();
+      });
+      minus.addEventListener('click', function () {
+        pax.value = Math.max(1, (parseInt(pax.value, 10) || 1) - 1); syncPax();
+      });
+      syncPax();
+
+      // موعد السفر: من النهارده وطالع
+      var d = document.getElementById('date');
+      var today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+      d.min = today.toISOString().slice(0, 10);
+
+      // تنظيف رقم الجوال من أي رموز
+      var phone = document.getElementById('phone');
+      phone.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+      });
+    </script>
+  </body>
+</html>
